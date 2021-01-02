@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		52889C6325A064CD00D87831 /* DMM_Actress_FinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52889C6225A064CD00D87831 /* DMM_Actress_FinderUITests.swift */; };
 		52889C7525A0665200D87831 /* EnvironmentURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52889C7425A0665200D87831 /* EnvironmentURLManager.swift */; };
 		52889C7B25A0675800D87831 /* ConfigSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52889C7A25A0675800D87831 /* ConfigSheet.swift */; };
+		52889C8125A06D6E00D87831 /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = 52889C8025A06D6E00D87831 /* Sliders */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52889C8125A06D6E00D87831 /* Sliders in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +170,9 @@
 			dependencies = (
 			);
 			name = DMM_Actress_Finder;
+			packageProductDependencies = (
+				52889C8025A06D6E00D87831 /* Sliders */,
+			);
 			productName = DMM_Actress_Finder;
 			productReference = 52889C4225A064CB00D87831 /* DMM_Actress_Finder.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +244,9 @@
 				Base,
 			);
 			mainGroup = 52889C3925A064CB00D87831;
+			packageReferences = (
+				52889C7F25A06D6E00D87831 /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
+			);
 			productRefGroup = 52889C4325A064CB00D87831 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -604,6 +612,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52889C7F25A06D6E00D87831 /* XCRemoteSwiftPackageReference "swiftui-sliders" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:spacenation/swiftui-sliders.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52889C8025A06D6E00D87831 /* Sliders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52889C7F25A06D6E00D87831 /* XCRemoteSwiftPackageReference "swiftui-sliders" */;
+			productName = Sliders;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52889C3A25A064CB00D87831 /* Project object */;
 }
