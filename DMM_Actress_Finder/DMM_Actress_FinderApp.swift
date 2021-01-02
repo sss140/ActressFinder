@@ -12,6 +12,7 @@ struct DMM_Actress_FinderApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(EnvironmentURLManager())
         }
     }
 }

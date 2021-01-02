@@ -8,9 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var isShowingSheet:Bool = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HStack{
+            Button(action:{isShowingSheet.toggle()}){
+                Image(systemName: "gear").font(.largeTitle).padding()
+            }
+            .sheet(isPresented: $isShowingSheet,onDismiss: {
+                //self.actressVM.actresses.removeAll()
+                //self.actressVM.urlManager.resetOffset()
+                //self.actressVM.getNext()
+            }){
+                ConfigSheet()
+                   // .environmentObject(EnvironmentURLManager)
+            }
+            Spacer()
+            //Toggle("", isOn: $isObtainPicture).padding()
+        }
     }
 }
 

@@ -13,6 +13,8 @@
 		52889C4D25A064CD00D87831 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52889C4C25A064CD00D87831 /* Preview Assets.xcassets */; };
 		52889C5825A064CD00D87831 /* DMM_Actress_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52889C5725A064CD00D87831 /* DMM_Actress_FinderTests.swift */; };
 		52889C6325A064CD00D87831 /* DMM_Actress_FinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52889C6225A064CD00D87831 /* DMM_Actress_FinderUITests.swift */; };
+		52889C7525A0665200D87831 /* EnvironmentURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52889C7425A0665200D87831 /* EnvironmentURLManager.swift */; };
+		52889C7B25A0675800D87831 /* ConfigSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52889C7A25A0675800D87831 /* ConfigSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		52889C5E25A064CD00D87831 /* DMM_Actress_FinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DMM_Actress_FinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52889C6225A064CD00D87831 /* DMM_Actress_FinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMM_Actress_FinderUITests.swift; sourceTree = "<group>"; };
 		52889C6425A064CD00D87831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52889C7425A0665200D87831 /* EnvironmentURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentURLManager.swift; sourceTree = "<group>"; };
+		52889C7A25A0675800D87831 /* ConfigSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +101,9 @@
 			children = (
 				52889C4525A064CB00D87831 /* DMM_Actress_FinderApp.swift */,
 				52889C4725A064CB00D87831 /* ContentView.swift */,
+				52889C7925A0673D00D87831 /* Views */,
 				52889C4925A064CD00D87831 /* Assets.xcassets */,
+				52889C7325A0662D00D87831 /* EnvironmentObjects */,
 				52889C4E25A064CD00D87831 /* Info.plist */,
 				52889C4B25A064CD00D87831 /* Preview Content */,
 			);
@@ -128,6 +134,22 @@
 				52889C6425A064CD00D87831 /* Info.plist */,
 			);
 			path = DMM_Actress_FinderUITests;
+			sourceTree = "<group>";
+		};
+		52889C7325A0662D00D87831 /* EnvironmentObjects */ = {
+			isa = PBXGroup;
+			children = (
+				52889C7425A0665200D87831 /* EnvironmentURLManager.swift */,
+			);
+			path = EnvironmentObjects;
+			sourceTree = "<group>";
+		};
+		52889C7925A0673D00D87831 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52889C7A25A0675800D87831 /* ConfigSheet.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52889C7525A0665200D87831 /* EnvironmentURLManager.swift in Sources */,
 				52889C4825A064CB00D87831 /* ContentView.swift in Sources */,
 				52889C4625A064CB00D87831 /* DMM_Actress_FinderApp.swift in Sources */,
+				52889C7B25A0675800D87831 /* ConfigSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
