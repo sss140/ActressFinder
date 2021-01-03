@@ -8,6 +8,8 @@
 import SwiftUI
 import Sliders
 
+
+
 struct ConfigSheet: View {
     @EnvironmentObject var urlManager:EnvironmentURLManager
     @Environment(\.presentationMode) var presentationMode
@@ -18,29 +20,20 @@ struct ConfigSheet: View {
         NavigationView{
             VStack{
                 List{
-                    VStack{
-                        Button(action: {
-                            self.urlManager.getURL()
-                        }){
-                            Text("Button")
-                        }
-                    }
                     //bust
                     VStack{
                         Toggle(isOn: self.$urlManager.bustAppearance){
                             Text(self.urlManager.bustAppearance ? self.urlManager.bustString:"バスト")
                         }
                         if self.urlManager.bustAppearance{
-                        RangeSlider(range: self.$urlManager.bustValue, in: 50...155, step: 1, onEditingChanged: {_ in
-                            let max:Int = Int(self.urlManager.bustValue.upperBound)
-                            let min:Int = Int(self.urlManager.bustValue.lowerBound)
-                            self.urlManager.bustString = "バスト \(min)cm〜\(max)cm"
-                        })
-                        
+                            RangeSlider(range: self.$urlManager.bustValue, in: 50...155, step: 1, onEditingChanged: {_ in
+                                let max:Int = Int(self.urlManager.bustValue.upperBound)
+                                let min:Int = Int(self.urlManager.bustValue.lowerBound)
+                                self.urlManager.bustString = "バスト \(min)cm〜\(max)cm"
+                            })
                         }
                     }
                     //waist
-                    
                     VStack{
                         Toggle(isOn: self.$urlManager.waistAppearance){
                             Text(self.urlManager.waistAppearance ? self.urlManager.waistString:"ウエスト")
@@ -49,11 +42,11 @@ struct ConfigSheet: View {
                             RangeSlider(range: self.$urlManager.waistValue, in: 45...140, step: 1, onEditingChanged: {_ in
                                 let max:Int = Int(self.urlManager.waistValue.upperBound)
                                 let min:Int = Int(self.urlManager.waistValue.lowerBound)
-                            self.urlManager.waistString = "ウエスト \(min)cm〜\(max)cm"
-                        })
+                                self.urlManager.waistString = "ウエスト \(min)cm〜\(max)cm"
+                            })
                         }
                     }
-                   //Hip
+                    //Hip
                     VStack{
                         Toggle(isOn: self.$urlManager.hipAppearance){
                             Text(self.urlManager.hipAppearance ? self.urlManager.hipString:"ヒップ")
@@ -62,8 +55,8 @@ struct ConfigSheet: View {
                             RangeSlider(range: self.$urlManager.hipValue, in: 25...150, step: 1, onEditingChanged: {_ in
                                 let max:Int = Int(self.urlManager.hipValue.upperBound)
                                 let min:Int = Int(self.urlManager.hipValue.lowerBound)
-                            self.urlManager.hipString = "ヒップ \(min)cm〜\(max)cm"
-                        })
+                                self.urlManager.hipString = "ヒップ \(min)cm〜\(max)cm"
+                            })
                         }
                     }
                     //height
@@ -76,10 +69,23 @@ struct ConfigSheet: View {
                                 let max:Int = Int(self.urlManager.heightValue.upperBound)
                                 let min:Int = Int(self.urlManager.heightValue.lowerBound)
                                 self.urlManager.heightString = "身長 \(min)cm〜\(max)cm"
-                        })
+                            })
                         }
                     }
-                    
+                    //birthday
+                    VStack{
+                        Toggle(isOn: self.$urlManager.birthdayAppearance){
+                            Text(self.urlManager.birthdayAppearance ? self.urlManager.birthdayString:"年齢")
+                        }
+                        if self.urlManager.birthdayAppearance{
+                            RangeSlider(range: self.$urlManager.birthdayValue, in: 18...60, step: 1, onEditingChanged: {_ in
+                                let max:Int = Int(self.urlManager.birthdayValue.upperBound)
+                                let min:Int = Int(self.urlManager.birthdayValue.lowerBound)
+                                self.urlManager.birthdayString = "年齢 \(min)歳〜\(max)歳"
+                            })
+                        }
+                    }
+ 
                     //sort
                     VStack{
                         Toggle(isOn: self.$urlManager.sortAppearance){
